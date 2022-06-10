@@ -153,7 +153,7 @@ class _TbAppSearchBarState extends TbContextState<TbAppSearchBar> {
               color: Color(0xFF282828).withAlpha((255 * 0.38).ceil()),
             ),
             contentPadding: EdgeInsets.only(left: 15, bottom: 11, top: 15, right: 15),
-            hintText: widget.searchHint ?? 'Search',
+            hintText: widget.searchHint ?? '搜索',
           )
       ),
       actions: [

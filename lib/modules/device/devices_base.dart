@@ -16,7 +16,7 @@ import 'package:thingsboard_client/thingsboard_client.dart';
 mixin DevicesBase on EntitiesBase<EntityData, EntityDataQuery> {
 
   @override
-  String get title => 'Devices';
+  String get title => '设备管理';
 
   @override
   String get noItemsFoundText => 'No devices found';
@@ -158,7 +158,7 @@ class _DeviceCardState extends TbContextState<DeviceCard> {
                   image = SvgPicture.asset(ThingsboardImage.deviceProfilePlaceholder,
                       color: Theme.of(context).primaryColor,
                       colorBlendMode: BlendMode.overlay,
-                      semanticsLabel: 'Device');
+                      semanticsLabel: '设备');
                   imageFit = BoxFit.cover;
                 }
                 return Row(
@@ -241,7 +241,7 @@ class _DeviceCardState extends TbContextState<DeviceCard> {
                                                         fontWeight: FontWeight.normal,
                                                         height: 16 / 12
                                                     )),
-                                                Text(widget.device.attribute('active') == 'true' ? 'Active' : 'Inactive',
+                                                Text(widget.device.attribute('active') == 'true' ? '在线' : '离线',
                                                     style: TextStyle(
                                                       color: widget.device.attribute('active') == 'true' ? Color(0xFF008A00) : Color(0xFFAFAFAF),
                                                       fontSize: 12,
@@ -305,7 +305,7 @@ class _DeviceCardState extends TbContextState<DeviceCard> {
                     image = SvgPicture.asset(ThingsboardImage.deviceProfilePlaceholder,
                         color: Theme.of(context).primaryColor,
                         colorBlendMode: BlendMode.overlay,
-                        semanticsLabel: 'Device');
+                        semanticsLabel: '设备');
                     imageFit = BoxFit.cover;
                   }
                   return ClipRRect(

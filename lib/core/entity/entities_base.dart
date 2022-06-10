@@ -352,7 +352,7 @@ abstract class BaseEntitiesState<T, P> extends TbContextState<BaseEntitiesWidget
   Widget noItemsFoundIndicatorBuilder(BuildContext context) {
     return FirstPageExceptionIndicator(
       title: widget.noItemsFoundText,
-      message: 'The list is currently empty.',
+      message: '当前列表没有内容.',
       onTryAgain: widget.searchMode ? null : () => pagingController.refresh(),
     );
   }

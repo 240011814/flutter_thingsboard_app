@@ -46,7 +46,7 @@ class _ProfilePageState extends TbPageState<ProfilePage> {
         backgroundColor: Colors.white,
         appBar: TbAppBar(
           tbContext,
-          title: const Text('Profile'),
+          title: const Text('个人信息'),
           actions: [
             IconButton(
                 icon: Icon(

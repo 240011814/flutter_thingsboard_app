@@ -41,7 +41,7 @@ class _DevicesListPageState extends TbPageState<DevicesListPage> {
       String titleText = widget.deviceType != null ? widget.deviceType! : 'All devices';
       String? subTitleText;
       if (widget.active != null) {
-        subTitleText = widget.active == true ? 'Active' : 'Inactive';
+        subTitleText = widget.active == true ? '在线' : '离线';
       }
       Column title = Column(
         crossAxisAlignment: CrossAxisAlignment.start,

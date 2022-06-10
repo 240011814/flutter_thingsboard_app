@@ -27,7 +27,7 @@ class ThingsboardAppRouter {
           title: Text('Not Found')
         ),
         body: Center(
-          child: Text('Route not defined: ${settings!.name}')
+          child: Text('路径没有定义: ${settings!.name}')
         ),
       );
     });

@@ -31,7 +31,7 @@ class _ChangePasswordPageState extends TbContextState<ChangePasswordPage> {
         backgroundColor: Colors.white,
         appBar: TbAppBar(
           tbContext,
-          title: const Text('Change Password'),
+          title: const Text('修改密码d'),
         ),
         body: Stack(
           children: [
@@ -50,7 +50,7 @@ class _ChangePasswordPageState extends TbContextState<ChangePasswordPage> {
                               valueListenable: _showCurrentPasswordNotifier,
                               builder: (BuildContext context, bool showPassword, child) {
                                 return FormBuilderTextField(
-                                  name: 'currentPassword',
+                                  name: '当前密码',
                                   obscureText: !showPassword,
                                   autofocus: true,
                                   validator: FormBuilderValidators.compose([
@@ -64,7 +64,7 @@ class _ChangePasswordPageState extends TbContextState<ChangePasswordPage> {
                                         },
                                       ),
                                       border: OutlineInputBorder(),
-                                      labelText: 'Current password *'
+                                      labelText: '当前密码 *'
                                   ),
                                 );
                               }
@@ -74,7 +74,7 @@ class _ChangePasswordPageState extends TbContextState<ChangePasswordPage> {
                                 valueListenable: _showNewPasswordNotifier,
                                 builder: (BuildContext context, bool showPassword, child) {
                                   return FormBuilderTextField(
-                                    name: 'newPassword',
+                                    name: '新密码',
                                     obscureText: !showPassword,
                                     validator: FormBuilderValidators.compose([
                                       FormBuilderValidators.required(context, errorText: 'New password is required.')
@@ -87,7 +87,7 @@ class _ChangePasswordPageState extends TbContextState<ChangePasswordPage> {
                                           },
                                         ),
                                         border: OutlineInputBorder(),
-                                        labelText: 'New password *'
+                                        labelText: '新密码 *'
                                     ),
                                   );
                                 }
@@ -97,7 +97,7 @@ class _ChangePasswordPageState extends TbContextState<ChangePasswordPage> {
                                 valueListenable: _showNewPassword2Notifier,
                                 builder: (BuildContext context, bool showPassword, child) {
                                   return FormBuilderTextField(
-                                    name: 'newPassword2',
+                                    name: '新密码确认',
                                     obscureText: !showPassword,
                                     validator: FormBuilderValidators.compose([
                                       FormBuilderValidators.required(context, errorText: 'New password again is required.')
@@ -110,7 +110,7 @@ class _ChangePasswordPageState extends TbContextState<ChangePasswordPage> {
                                           },
                                         ),
                                         border: OutlineInputBorder(),
-                                        labelText: 'New password again *'
+                                        labelText: '新密码确认 *'
                                     ),
                                   );
                                 }
@@ -122,7 +122,7 @@ class _ChangePasswordPageState extends TbContextState<ChangePasswordPage> {
                                 onPressed: () {
                                   _changePassword();
                                 },
-                                child: Center(child: Text('Change Password'))
+                                child: Center(child: Text('修改密码'))
                             )
                           ]
                       ),

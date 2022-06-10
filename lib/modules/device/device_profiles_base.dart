@@ -18,10 +18,10 @@ mixin DeviceProfilesBase on EntitiesBase<DeviceProfileInfo, PageLink> {
   final RefreshDeviceCounts refreshDeviceCounts = RefreshDeviceCounts();
 
   @override
-  String get title => 'Devices';
+  String get title => '设备管理';
 
   @override
-  String get noItemsFoundText => 'No devices found';
+  String get noItemsFoundText => '设备没有找到';
 
   @override
   Future<PageData<DeviceProfileInfo>> fetchEntities(PageLink pageLink) {
@@ -135,7 +135,7 @@ class _AllDevicesCardState extends TbContextState<AllDevicesCard> {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('All devices',
+                          Text('所有设备',
                               style: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   fontSize: 14,
@@ -288,7 +288,7 @@ class _DeviceProfileCardState extends TbContextState<DeviceProfileCard> {
       image = SvgPicture.asset(ThingsboardImage.deviceProfilePlaceholder,
           color: Theme.of(context).primaryColor,
           colorBlendMode: BlendMode.overlay,
-          semanticsLabel: 'Device profile');
+          semanticsLabel: '设备详情');
       imageFit = BoxFit.cover;
       padding = 0;
     }
@@ -409,7 +409,7 @@ Widget _buildDeviceCount(BuildContext context, bool active, int count) {
               ],
             ),
               SizedBox(width: 8.67),
-              Text(active ? 'Active' : 'Inactive', style: TextStyle(
+              Text(active ? '在线' : '离线', style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w500,
                   height: 16 / 12,

@@ -9,7 +9,7 @@ class DeviceDetailsPage extends EntityDetailsPage<DeviceInfo> {
   DeviceDetailsPage(TbContext tbContext, String deviceId):
         super(tbContext,
               entityId: deviceId,
-              defaultTitle: 'Device');
+              defaultTitle: '设备');
 
   @override
   Future<DeviceInfo?> fetchEntity(String deviceId) {

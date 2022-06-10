@@ -35,7 +35,7 @@ const Map<AlarmStatus, String> alarmStatusTranslations = {
 mixin AlarmsBase on EntitiesBase<AlarmInfo, AlarmQuery> {
 
   @override
-  String get title => 'Alarms';
+  String get title => '告警';
 
   @override
   String get noItemsFoundText => 'No alarms found';
@@ -268,7 +268,7 @@ class _AlarmCardState extends TbContextState<AlarmCard> {
   }
 
   _clearAlarm(AlarmInfo alarm) async {
-    var res = await confirm(title: 'Clear Alarm', message: 'Are you sure you want to clear Alarm?', cancel: 'No', ok: 'Yes');
+    var res = await confirm(title: '清除告警', message: '确定要清除告警?', cancel: '否', ok: '是');
     if (res != null && res) {
       setState(() {
         loading = true;
@@ -284,7 +284,7 @@ class _AlarmCardState extends TbContextState<AlarmCard> {
   }
 
   _ackAlarm(AlarmInfo alarm) async {
-    var res = await confirm(title: 'Acknowledge Alarm', message: 'Are you sure you want to acknowledge Alarm?', cancel: 'No', ok: 'Yes');
+    var res = await confirm(title: '确认告警', message: '是否要确认告警?', cancel: '否', ok: '是');
     if (res != null && res) {
       setState(() {
         loading = true;
